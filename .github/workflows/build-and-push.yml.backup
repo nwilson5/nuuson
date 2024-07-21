@@ -1,3 +1,5 @@
+# Figured out running the build on cloudflare pages instead of here
+
 name: Build and Push
 
 on:
