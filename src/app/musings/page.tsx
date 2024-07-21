@@ -1,5 +1,3 @@
-import ExternalLinks from '../../components/ExternalLinks'
-
 export default function About() {
   return (
     <div className="max-w-3xl mx-auto">
@@ -11,7 +9,6 @@ export default function About() {
         </p>
       </section>
 
-      <div className="mt-8"><ExternalLinks /></div>
       </div>
   )
 }

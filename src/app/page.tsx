@@ -1,34 +1,27 @@
-import ExternalLinks from '../components/ExternalLinks'
 import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="max-w-2xl mx-auto text-center">
-      <h1 className="text-4xl font-bold mb-4">Welcome! I&apos;m Nicholas Wilson</h1>
+    <div className="max-w-3xl mx-auto text-center">
+      <h1 className="text-2xl font-bold mb-4">Welcome! I&apos;m Nicholas Wilson</h1>
       {/* Image */}
       <img
-        src="/images/profile.jpg"
+        src="/images/profile200x200.webp"
         alt="Nicholas Wilson"
         width="200"
         height="200"
         className="rounded-full mx-auto text-center my-4"
       />
       
-      <p className="text-xl mb-6">
-        Native Oregonian and Software Engineer 2011-present.
+      <p className="text-base mb-6">
+        Software Engineer @ Eugene, OR
       </p>
-            
-      <p className="text-xl mb-6">
-        Let&apos;s connect
-      </p>
-      
-      <ExternalLinks />
 
-      <p className="text-xl mb-6 my-48">
-        This website is a work in progress. Hosted on GitHub (<Link href="https://github.com/nwilson5/nuuson" className="text-blue-500 hover:underline"
-        >github.com/nwilson5/nuuson</Link>) and deployed using Cloudflare Pages.
+      <p className="text-base mb-6">
+        <Link href="/about">About</Link>&nbsp;&middot;&nbsp;
+        <Link href="/contact">Contact</Link>
       </p>
 
     </div>
-  );
+);
 }

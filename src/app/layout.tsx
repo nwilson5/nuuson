@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/Footer";
 import Header from '../components/Header'
+import ExternalLinks from '../components/ExternalLinks'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       <main className="flex-grow container mx-auto px-4 py-8">
         {children}
       </main>
+      <div className="mb-8"><ExternalLinks /></div>
       <Footer />
       </body>
     </html>

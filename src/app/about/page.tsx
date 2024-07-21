@@ -1,4 +1,3 @@
-import ExternalLinks from '../../components/ExternalLinks'
 import Resume from '../../components/Resume'
 
 export default function About() {
@@ -6,7 +5,7 @@ export default function About() {
     <div className="max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>
       <img
-          src="/images/profile.jpg"
+          src="/images/profile200x200.webp"
           alt="Nicholas Wilson"
           width="200"
           height="200"
@@ -42,14 +41,13 @@ export default function About() {
         <Resume />
       </section>
       
-      <section className="mb-8">
+      <section className="mb-4">
         <h2 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h2>
         <p className="mb-4">
           I&apos;m open to new opportunities, collaborations, or just a good conversation. Feel free to reach out to me on LinkedIn or via email.
         </p>
       </section>
 
-      <div className="mt-8"><ExternalLinks /></div>
       </div>
   )
 }

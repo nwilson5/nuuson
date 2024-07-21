@@ -9,7 +9,8 @@ function Resume() {
         data="/resume/Nicholas-Wilson-resume-v.pdf" 
         type="application/pdf"
     >
-        <p>Unable to display PDF file. <Link href="/resume/Nicholas-Wilson-resume-v.pdf" className="text-blue-500 hover:underline">Download</Link> instead.</p>
+        <p>Unable to embed PDF in your browser.<br />
+        <Link href="/resume/Nicholas-Wilson-resume-v.pdf">Download Resume</Link> instead.</p>
     </object>
   );
 }
