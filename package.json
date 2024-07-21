@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-18-pdf/renderer": "^2.3.4",
     "@react-pdf/renderer": "^3.4.4",
+    "eslint": "^8.57.0",
     "next": "14.2.5",
     "pdfjs": "^2.5.3",
     "react": "^18",
@@ -21,7 +22,6 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^9.7.0",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
     "stylelint-config-recommended": "^14.0.1",
