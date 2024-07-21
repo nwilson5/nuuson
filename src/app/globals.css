@@ -22,7 +22,7 @@ body {
 
 /* link colors, hover */
 a {
-  @apply text-blue-500;
+  color: #1949C7;
 }
 footer a {
   color: #DCDBFF;
