@@ -1,16 +1,11 @@
 import Resume from '../../components/Resume'
+import Image200x from '../../components/Image200'
 
 export default function About() {
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>
-      <img
-          src="/images/profile200x200.webp"
-          alt="Nicholas Wilson"
-          width="200"
-          height="200"
-          className="rounded-full mx-auto text-center my-4"
-      />
+      <Image200x />
           
       <p className="text-lg mb-6 leading-relaxed">
         Hello, I&apos;m Nicholas Wilson. I grew up in Eugene, Oregon and have dual citizenship in the United States and Canada (a point of contention as a child, but not anymore).
