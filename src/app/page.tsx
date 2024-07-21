@@ -17,6 +17,20 @@ export default function Home() {
         <Link href="/contact">Contact</Link>
       </p>
 
+      <p className="text-base mb-6 mt-12">
+        
+        <img
+          src="/images/pagespeed-insights-333x234.webp"
+          srcSet="/images/pagespeed-insights-333x234.webp 1x,
+                  /images/pagespeed-insights-500x351.webp 1.5x,
+                  /images/pagespeed-insights-666x468.webp 2x"
+          width="333"
+          height="234"
+          alt="PageSpeed Insights"
+          className="mx-auto"
+        />
+      </p>
+
     </div>
 );
 }
