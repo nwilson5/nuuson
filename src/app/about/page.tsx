@@ -1,16 +1,15 @@
 import ExternalLinks from '../../components/ExternalLinks'
 import Resume from '../../components/Resume'
-import Image from 'next/image'
 
 export default function About() {
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>
-      <Image
+      <img
           src="/images/profile.jpg"
           alt="Nicholas Wilson"
-          width={200}
-          height={200}
+          width="200"
+          height="200"
           className="rounded-full mx-auto text-center my-4"
       />
           

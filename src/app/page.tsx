@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ExternalLinks from '../components/ExternalLinks'
 import Link from 'next/link'
 
@@ -7,11 +6,11 @@ export default function Home() {
     <div className="max-w-2xl mx-auto text-center">
       <h1 className="text-4xl font-bold mb-4">Welcome! I&apos;m Nicholas Wilson</h1>
       {/* Image */}
-      <Image
+      <img
         src="/images/profile.jpg"
         alt="Nicholas Wilson"
-        width={200}
-        height={200}
+        width="200"
+        height="200"
         className="rounded-full mx-auto text-center my-4"
       />
       
