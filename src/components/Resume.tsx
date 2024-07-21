@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function Resume() {
   return (
@@ -8,7 +9,7 @@ function Resume() {
         data="/resume/Nicholas-Wilson-resume-v.pdf" 
         type="application/pdf"
     >
-        <p>Unable to display PDF file. <a href="/resume/Nicholas-Wilson-resume-v.pdf">Download</a> instead.</p>
+        <p>Unable to display PDF file. <Link href="/resume/Nicholas-Wilson-resume-v.pdf" className="text-blue-500 hover:underline">Download</Link> instead.</p>
     </object>
   );
 }
