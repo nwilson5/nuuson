@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
+import remarkGfm from 'remark-gfm'
 import html from 'remark-html'
 import type { Metadata } from 'next'
 import styles from '@/styles/blogPost.module.css'
@@ -40,7 +41,8 @@ async function getPostData(slug: string): Promise<PostData> {
     const matterResult = matter(fileContents)
   
     const processedContent = await remark()
-      .use(html)
+      .use(remarkGfm)
+      .use(html, { sanitize: false })
       .process(matterResult.content)
     const contentHtml = processedContent.toString()
   
