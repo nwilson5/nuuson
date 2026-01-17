@@ -17,6 +17,11 @@ interface PostData {
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), 'src', 'posts')
+
+  if (!fs.existsSync(postsDirectory)) {
+    return []
+  }
+
   const filenames = fs.readdirSync(postsDirectory)
 
   return filenames.map((filename) => ({
