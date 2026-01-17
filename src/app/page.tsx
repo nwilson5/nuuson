@@ -18,7 +18,9 @@ export default function Home() {
       </p>
 
       <p className="text-base mb-6 mt-12">
-        
+        <span className="text-xl mb-4">
+          PageSpeed Insights
+        </span>
         <img
           src="/images/pagespeed-insights-333x234.webp"
           srcSet="/images/pagespeed-insights-333x234.webp 1x,

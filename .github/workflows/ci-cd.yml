@@ -1,10 +1,67 @@
-name: cicdtest
-on: [push]
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Node version consistency
+        run: |
+          NVMRC_VERSION=$(cat .nvmrc | tr -d '[:space:]')
+          ENGINES_NODE=$(node -p "require('./package.json').engines?.node || ''")
+          echo ".nvmrc: $NVMRC_VERSION"
+          echo "engines.node: $ENGINES_NODE"
+          if [ -n "$ENGINES_NODE" ]; then
+            MIN_VERSION=$(echo "$ENGINES_NODE" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+            MIN_MAJOR=$(echo "$MIN_VERSION" | cut -d. -f1)
+            NVMRC_MAJOR=$(echo "$NVMRC_VERSION" | cut -d. -f1)
+            if [ "$NVMRC_MAJOR" -lt "$MIN_MAJOR" ]; then
+              echo "Error: .nvmrc major version ($NVMRC_MAJOR) is less than required ($MIN_MAJOR)"
+              exit 1
+            fi
+            echo "Node version check passed"
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Eugene FTW
+      - uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
