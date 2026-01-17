@@ -1,7 +1,7 @@
 ---
-title: Coming Soon
+title: Coming...
 date: "2026-01-17"
 description: Hello.
 ---
 
-Placeholder post.
+~~Soon~~ Maybe some day.
