@@ -11,7 +11,7 @@ interface PostData {
     title: string;
     date: string;
     contentHtml: string;
-    [key: string]: any; // For any additional front matter
+    [key: string]: string | undefined;
 }
 
 
