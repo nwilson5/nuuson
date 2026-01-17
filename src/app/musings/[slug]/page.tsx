@@ -15,6 +15,8 @@ interface PostData {
 }
 
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), 'src', 'posts')
 
