@@ -1,43 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+@theme {
+  --color-light-yellow: rgb(255 249 212);
+}
 
 body {
   @apply bg-light-yellow text-gray-900;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  a {
+    color: #1949C7;
   }
-}
+  footer a {
+    color: #DCDBFF;
+  }
+  header a {
+    @apply text-white;
+  }
 
-/* link colors, hover */
-a {
-  color: #1949C7;
-}
-footer a {
-  color: #DCDBFF;
-}
-header a {
-  @apply text-white;
-}
-
-a:hover {
-  @apply text-blue-700;
-  text-decoration: underline;
-}
-header a:hover {
-  @apply text-white;
-}
-footer a:hover {
-  color: #B3B2FF;
+  a:hover {
+    @apply text-blue-700;
+    text-decoration: underline;
+  }
+  header a:hover {
+    @apply text-white;
+  }
+  footer a:hover {
+    color: #B3B2FF;
+  }
 }

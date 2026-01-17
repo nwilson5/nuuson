@@ -1,5 +1,11 @@
 import Resume from '../../components/Resume'
 import Image200x from '../../components/Image200'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'About myself, including education, professional experience, and how to connect with me.',
+}
 
 export default function About() {
   return (
