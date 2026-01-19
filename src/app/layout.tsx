@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow w-full max-w-5xl mx-auto px-4 py-8 my-4 bg-amber-50/75 backdrop-blur-sm rounded-lg">
         {children}
       </main>
       <div className="mb-8"><ExternalLinks /></div>

@@ -42,7 +42,7 @@ export default function Musings() {
   const postsMetadata = getPostMetadata()
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div>
       <h1 className="text-4xl font-bold mb-6">Musings</h1>
       
       <section className="mb-8">
