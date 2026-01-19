@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @theme {
   --color-light-yellow: rgb(255 249 212);
 }
@@ -7,6 +11,10 @@
 body {
   @apply bg-light-yellow text-gray-900;
   caret-color: transparent;
+  background-image: url('/images/spencers-butte-1920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @layer base {

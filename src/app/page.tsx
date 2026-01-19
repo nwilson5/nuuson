@@ -3,7 +3,7 @@ import Image200x from '../components/Image200'
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto text-center">
+    <div className="text-center">
       <h1 className="text-2xl font-bold mb-4">Welcome! I&apos;m Nicholas Wilson</h1>
       {/* Image */}
       <Image200x />
