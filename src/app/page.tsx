@@ -14,7 +14,8 @@ export default function Home() {
 
       <p className="text-base mb-6">
         <Link href="/about">About</Link>&nbsp;&middot;&nbsp;
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact">Contact</Link>&nbsp;&middot;&nbsp;
+        <Link href="/lost">I&apos;m Lost</Link>
       </p>
 
       <p className="text-base mb-6 mt-12">
