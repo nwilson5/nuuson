@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Nicholas Wilson - Software Engineer",
   description: "This is my personal website (github.com/nwilson5/nuuson) and served with Cloudflare Pages.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
